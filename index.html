@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <img src="https://mps.milwaukee.k12.wi.us/MPS-Public/CSA/MediaCopy-1/BLMA.JPG" style="width:100%">
+    <div class="text">Students at Black and Latino Male Achievement Event</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://mps.milwaukee.k12.wi.us/MPS-Public/CSA/MediaCopy-1/BLMA_18.JPG" style="width:100%">
+    <div class="text">Student Speaking at BMLA Program</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://mps.milwaukee.k12.wi.us/MPS-Public/CSA/MediaCopy-1/BLMAMarketing_8.jpg" style="width:100%">
+    <div class="text">BMLA Promotional Photo</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="https://mps.milwaukee.k12.wi.us/MPS-Public/CSA/MediaCopy-1/1TML-19_5Copy-1" style="width:100%">
+    <div class="text">BMLA Mentors with Students</div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  const slides = document.getElementsByClassName("mySlides");
+  const dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
