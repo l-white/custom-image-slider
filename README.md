@@ -13,7 +13,7 @@ Modifications:
 
 **Example**
 
-Change:\ 
+Change:
 &nbsp;&nbsp;&nbsp;&nbsp;let plusSlides = n => showSlides(slideIndex += n);\
 To:
     function plusSlides(n) {
