@@ -13,9 +13,9 @@ Modifications:
 
 **Example**
 
-Change:
+Change:<space>
     let plusSlides = n => showSlides(slideIndex += n);
-To:
+To:<space>
     function plusSlides(n) {
         showSlides(slideIndex += n);
     }
